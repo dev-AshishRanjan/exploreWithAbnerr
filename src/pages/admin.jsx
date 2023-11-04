@@ -1,11 +1,7 @@
-import Head from "next/head";
-import styles from "@/styles/Home.module.scss";
-import DummyPage from "@/style-guide/page-components/DummyPage";
+import React from "react";
+import AdminPage from "@/style-guide/page-components/AdminPage";
+const Admin = () => {
+  return <AdminPage />;
+};
 
-export default function Home() {
-  return (
-    <>
-      <DummyPage />
-    </>
-  );
-}
+export default Admin;
