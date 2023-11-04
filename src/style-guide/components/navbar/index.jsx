@@ -4,13 +4,15 @@ import Link from "next/link";
 
 const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
   const [activeLink, setActiveLink] = useState(
-    (typeof window !== 'undefined' && window.location.pathname.split("/")[1])|| "home"
+    (typeof window !== "undefined" && window.location.pathname.split("/")[1]) ||
+      "home"
   );
   return (
     <div className={styles.navWrapper}>
       <div
-        className={`${styles.navbar} ${mobileHamClicked ? styles.navShow : styles.navHide
-          }`}
+        className={`${styles.navbar} ${
+          mobileHamClicked ? styles.navShow : styles.navHide
+        }`}
       >
         <div className={styles.logo}>
           LOGO
@@ -49,8 +51,9 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
           </Link>
           <Link
             href="/projects"
-            className={`${activeLink === "projects" ? styles.activeLink : null
-              }`}
+            className={`${
+              activeLink === "projects" ? styles.activeLink : null
+            }`}
             onClick={() => {
               setActiveLink("projects");
               setMobileHamClicked(!mobileHamClicked);
