@@ -1,0 +1,34 @@
+.body {
+  background: radial-gradient(
+    circle at 85vw 50vh,
+    var(--heroSection-bg2),
+    var(--heroSection-bg1) 40%
+  );
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+@keyframes cursor_animate {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1 1.1;
+  }
+  75% {
+    scale: 1.1 1;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@media (max-width: 769px) {
+  .body {
+    background: radial-gradient(
+      circle at 50vw 80vh,
+      var(--heroSection-bg2),
+      var(--heroSection-bg1) 40%
+    );
+  }
+}
