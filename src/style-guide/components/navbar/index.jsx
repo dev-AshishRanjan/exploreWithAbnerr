@@ -3,10 +3,17 @@ import styles from "./style.module.scss";
 import Link from "next/link";
 
 const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
+  const [dropdown, setDropdown] = useState(false);
   const [activeLink, setActiveLink] = useState(
     (typeof window !== "undefined" && window.location.pathname.split("/")[1]) ||
       "home"
   );
+  const dmEnter = () => {
+    setDropdown(true);
+  };
+  const dmLeave = () => {
+    setDropdown(false);
+  };
   return (
     <div className={styles.navWrapper}>
       <div
@@ -15,10 +22,6 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
         }`}
       >
         <div className={styles.logo}>
-          LOGO
-          {/* <img src="/ashish.png" alt="" /> */}
-        </div>
-        <div className={styles.nav_links}>
           <Link
             href="/"
             className={`${activeLink === "home" ? styles.activeLink : null}`}
@@ -27,18 +30,10 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
               setMobileHamClicked(!mobileHamClicked);
             }}
           >
-            HOME
+            <img src="./images/logo.jpg" alt="DVANGA"></img>
           </Link>
-          <Link
-            href="/admin"
-            className={`${activeLink === "admin" ? styles.activeLink : null}`}
-            onClick={() => {
-              setActiveLink("admin");
-              setMobileHamClicked(!mobileHamClicked);
-            }}
-          >
-            ADMIN
-          </Link>
+        </div>
+        <div className={styles.nav_links}>
           <Link
             href="/about"
             className={`${activeLink === "about" ? styles.activeLink : null}`}
@@ -49,18 +44,53 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
           >
             ABOUT
           </Link>
-          <Link
-            href="/projects"
-            className={`${
-              activeLink === "projects" ? styles.activeLink : null
-            }`}
-            onClick={() => {
-              setActiveLink("projects");
-              setMobileHamClicked(!mobileHamClicked);
-            }}
+          <div
+            className={styles.gallerydropdown}
+            onMouseEnter={dmEnter}
+            onMouseLeave={dmLeave}
           >
-            PROJECTS
-          </Link>
+            GALLERY
+            {dropdown ? (
+              <div className={styles.gallerylinks}>
+                <Link
+                  href="/adventure"
+                  className={`${
+                    activeLink === "adventure" ? styles.activeLink : null
+                  }`}
+                  onClick={() => {
+                    setActiveLink("adventure");
+                    setMobileHamClicked(!mobileHamClicked);
+                  }}
+                >
+                  <div className={styles.sublink}>ADVENTURE</div>
+                </Link>
+                <Link
+                  href="/landscape"
+                  className={`${
+                    activeLink === "landscape" ? styles.activeLink : null
+                  }`}
+                  onClick={() => {
+                    setActiveLink("landscape");
+                    setMobileHamClicked(!mobileHamClicked);
+                  }}
+                >
+                  <div className={styles.sublink}>LANDSCAPE</div>
+                </Link>
+                <Link
+                  href="/portrait"
+                  className={`${
+                    activeLink === "portrait" ? styles.activeLink : null
+                  }`}
+                  onClick={() => {
+                    setActiveLink("portrait");
+                    setMobileHamClicked(!mobileHamClicked);
+                  }}
+                >
+                  <div className={styles.sublink}>PORTRAIT</div>
+                </Link>
+              </div>
+            ) : null}
+          </div>
           <Link
             href="/blogs"
             className={`${activeLink === "blogs" ? styles.activeLink : null}`}
@@ -70,6 +100,16 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
             }}
           >
             BLOGS
+          </Link>
+          <Link
+            href="/"
+            className={`${activeLink === "store" ? styles.activeLink : null}`}
+            onClick={() => {
+              setActiveLink("store");
+              setMobileHamClicked(!mobileHamClicked);
+            }}
+          >
+            STORE
           </Link>
           <Link
             href="/contact"
