@@ -112,7 +112,7 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
             STORE
           </Link>
           <Link
-            href="/contact"
+            href="/#contact"
             className={`${activeLink === "contact" ? styles.activeLink : null}`}
             onClick={() => {
               setActiveLink("contact");

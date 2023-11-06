@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./style.module.scss";
+import Login from "@/utils/AdminLogin";
 
 const AdminLogin = ({ setAdmin }) => {
   const [name, setName] = useState();
@@ -11,22 +12,23 @@ const AdminLogin = ({ setAdmin }) => {
     sendfrom.set("name", name);
     sendfrom.set("password", password);
     console.log(name, password);
-    fetch("/api/admin", {
-      method: "POST",
-      body: JSON.stringify({ name, password }),
-    })
-      .then((req) => req.json())
-      .then((res) => {
-        console.log({ res });
-        if (res.status === 200) {
-          setAdmin(res.admin);
-          if (!res.admin) {
-            alert("Wrong Creds");
-          } else {
-            alert("Welcome Admin");
-          }
-        }
-      });
+    Login(sendfrom, setAdmin);
+    // fetch("/api/admin", {
+    //   method: "POST",
+    //   body: JSON.stringify({ name, password }),
+    // })
+    //   .then((req) => req.json())
+    //   .then((res) => {
+    //     console.log({ res });
+    //     if (res.status === 200) {
+    //       setAdmin(res.admin);
+    //       if (!res.admin) {
+    //         alert("Wrong Creds");
+    //       } else {
+    //         alert("Welcome Admin");
+    //       }
+    //     }
+    //   });
   };
   return (
     <form className={styles.form}>

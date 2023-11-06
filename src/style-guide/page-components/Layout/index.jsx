@@ -5,6 +5,8 @@ import Home_carousel from "@/style-guide/components/Home_carousel";
 import Intro from "@/style-guide/components/Intro";
 import Blog_carousel from "@/style-guide/components/Blog_carousel";
 import styles from "./style.module.scss";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Layout = ({ children }) => {
   const [mobileHamClicked, setMobileHamClicked] = useState(false);
@@ -27,9 +29,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className={styles.body}>
-        {/* <Home_carousel className = {styles.carousel_body}/>
-        <Intro className ={styles.intro}/>
-        <Blog_carousel />
+        <ToastContainer />
         <Navbar
           mobileHamClicked={mobileHamClicked}
           setMobileHamClicked={setMobileHamClicked}
@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         <Hamburger
           mobileHamClicked={mobileHamClicked}
           setMobileHamClicked={setMobileHamClicked}
-        /> */}
+        />
         {children}
       </div>
     </>

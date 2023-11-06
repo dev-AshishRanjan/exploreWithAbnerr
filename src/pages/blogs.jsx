@@ -6,7 +6,6 @@ import Navbar from "@/style-guide/components/navbar";
 export default function Blogs() {
   return (
     <>
-      <Navbar />
       <Blog_carousel />
     </>
   );

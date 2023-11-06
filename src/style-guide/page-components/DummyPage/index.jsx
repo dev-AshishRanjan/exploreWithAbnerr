@@ -28,15 +28,6 @@ const Error = () => {
       <div className={styles.body}>
         <Home_carousel className={styles.carousel_body} />
         <Intro className={styles.intro} />
-        {/* <Blog_carousel /> */}
-        <Navbar
-          mobileHamClicked={mobileHamClicked}
-          setMobileHamClicked={setMobileHamClicked}
-        />
-        <Hamburger
-          mobileHamClicked={mobileHamClicked}
-          setMobileHamClicked={setMobileHamClicked}
-        />
       </div>
     </>
   );

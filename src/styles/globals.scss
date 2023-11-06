@@ -41,6 +41,8 @@ img {
 
 .btn {
   padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
   background: radial-gradient(
     circle at bottom right,
     var(--btn-bg-1),

@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100vw;
   @include mixins.flexCenter;
-  // background: url("");
+  background: url("../../../../public/images/aboutmainpage.jpg");
   form {
     width: 50%;
     @include mixins.flexCenter;
@@ -19,6 +19,7 @@
       width: 20rem;
       resize: none;
       color: var(--white);
+      border: 1px solid var(--white);
     }
   }
 }
