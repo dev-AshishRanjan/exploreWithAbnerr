@@ -51,6 +51,10 @@
 
 @media (max-width: 769px) {
   .body {
-    background: radial-gradient(circle at 50vw 80vh, #6085a8, var(--bg-1) 40%);
+    background: radial-gradient(
+      circle at 50vw 80vh,
+      var(--bloblight-blue),
+      var(--bg-1) 40%
+    );
   }
 }

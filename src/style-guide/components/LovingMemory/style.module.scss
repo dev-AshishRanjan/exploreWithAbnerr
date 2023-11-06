@@ -1,0 +1,9 @@
+@use "../../../styles/mixins.scss";
+
+.LovingMemory {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../../public/images/lovingmemory.jpg") no-repeat center
+    center / cover;
+  background-attachment: fixed;
+}

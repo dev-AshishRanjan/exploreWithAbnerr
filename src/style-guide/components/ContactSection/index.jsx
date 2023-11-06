@@ -43,7 +43,7 @@ const ContactSection = () => {
           onChange={(e) => setMsg(e.target.value)}
         ></textarea>
         <button type="submit" className="btn">
-          submit
+          SUBMIT
         </button>
       </form>
     </div>
