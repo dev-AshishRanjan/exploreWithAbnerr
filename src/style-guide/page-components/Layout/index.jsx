@@ -7,6 +7,7 @@ import Blog_carousel from "@/style-guide/components/Blog_carousel";
 import styles from "./style.module.scss";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 const Layout = ({ children }) => {
   const [mobileHamClicked, setMobileHamClicked] = useState(false);
@@ -26,9 +27,50 @@ const Layout = ({ children }) => {
   //   };
   // }, []);
 
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setCursorVariant] = useState("default");
+
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePosition({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+    },
+    text: {
+      height: 40,
+      width: 40,
+      x: mousePosition.x - 45,
+      y: mousePosition.y - 45,
+      backgroundColor: "transparent",
+      mixBlendMode: "difference",
+    },
+  };
+
   return (
     <>
       <div className={styles.body}>
+        <motion.div
+          className={styles.cursor1}
+          variants={variants}
+          animate={cursorVariant}
+        />
         <ToastContainer />
         <Navbar
           mobileHamClicked={mobileHamClicked}

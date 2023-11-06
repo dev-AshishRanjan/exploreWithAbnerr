@@ -11,20 +11,6 @@ const Error = () => {
   const [mobileHamClicked, setMobileHamClicked] = useState(false);
   return (
     <>
-      {/* <div className={styles.error}>
-        <h1>START</h1>
-        <p>Public Template for Nextjs</p>
-        <Filteroptions />
-        <div className={styles.socials}>
-          {Socials.map((ele) => {
-            return (
-              <a href={ele.link} target="_blank" title={ele.name}>
-                <Icon icon={`cib:${ele.name}`} color="#579" />
-              </a>
-            );
-          })} 
-        </div>
-      </div> */}
       <div className={styles.body}>
         <Home_carousel className={styles.carousel_body} />
         <Intro className={styles.intro} />

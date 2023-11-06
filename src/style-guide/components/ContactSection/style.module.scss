@@ -3,7 +3,9 @@
   height: 100vh;
   width: 100vw;
   @include mixins.flexCenter;
-  background: url("../../../../public/images/aboutmainpage.jpg");
+  background: url("../../../../public/images/aboutmainpage.jpg") no-repeat
+    center center / cover;
+  background-attachment: fixed;
   form {
     width: 50%;
     @include mixins.flexCenter;

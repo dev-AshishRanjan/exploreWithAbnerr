@@ -7,7 +7,7 @@ const ContactSection = () => {
   const [msg, setMsg] = useState();
   const [subject, setSubject] = useState();
   return (
-    <div className={styles.ContactSection}>
+    <div className={styles.ContactSection} id="contact">
       <form
         action="https://formsubmit.co/kumarashishranjan4971@gmail.com"
         method="POST"

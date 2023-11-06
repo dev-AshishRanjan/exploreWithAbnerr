@@ -9,6 +9,18 @@
   overflow-x: hidden;
 }
 
+.cursor1 {
+  border: 0.1rem solid rgba(255, 255, 255, 0.772);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 7;
+}
+
 .carousel_body {
   height: 100vh;
   width: 100vw;
@@ -39,6 +51,6 @@
 
 @media (max-width: 769px) {
   .body {
-    background: radial-gradient(circle at 50vw 80vh, #6085a8, var(-bg1) 40%);
+    background: radial-gradient(circle at 50vw 80vh, #6085a8, var(--bg-1) 40%);
   }
 }
