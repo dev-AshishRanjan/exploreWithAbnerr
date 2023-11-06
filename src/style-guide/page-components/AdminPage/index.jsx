@@ -4,7 +4,7 @@ import AdminLogin from "@/style-guide/components/AdminLogin";
 import AdminPanel from "@/style-guide/components/AdminPanel";
 
 const AdminPage = () => {
-  const [admin, setAdmin] = useState(false);
+  const [admin, setAdmin] = useState(true);
   return (
     <div className={styles.AdminPage}>
       <div className={styles.MainData}>

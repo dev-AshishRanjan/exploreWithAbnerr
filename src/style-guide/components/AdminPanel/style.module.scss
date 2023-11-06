@@ -10,44 +10,66 @@
   .AdminGroup {
     @include mixins.flexCenter;
     justify-content: space-around;
-    // flex-direction: column;
+    flex-direction: column;
     position: relative;
     height: 100vh !important;
     width: 100vw;
     gap: 1rem;
-    margin: 1rem 0;
-    padding-top: 5rem;
+    margin: 2rem 0;
     h1 {
       font-size: 5rem;
       font-family: "Anton", serif;
       font-weight: 900;
       filter: invert(0.5);
-      margin-bottom: 3rem;
-      position: absolute;
-      top: 0;
     }
-    .InnerGroup {
+    .OuterGroup {
       @include mixins.flexCenter;
-      flex-direction: column;
       gap: 1rem;
       margin: 1rem 0;
+      width: 100%;
+      justify-content: space-around;
+      .InnerGroup {
+        @include mixins.flexCenter;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
 
-      :where(input, textarea) {
-        padding: 0.5rem 1rem;
-        border-radius: 0.3rem;
-        background: var(--card-bg);
-        border: none;
-        outline: none;
-        width: 20rem;
-        resize: none;
-        color: var(--white);
-        word-wrap: break-word;
-        border: 1px solid var(--white);
+        :where(input, textarea) {
+          padding: 0.5rem 1rem;
+          border-radius: 0.3rem;
+          background: var(--card-bg);
+          border: none;
+          outline: none;
+          width: 20rem;
+          resize: none;
+          color: var(--white);
+          word-wrap: break-word;
+          border: 1px solid var(--white);
+        }
       }
     }
     img {
       height: 25rem;
       width: 25rem;
+    }
+    .imageUploadARTOthers {
+      min-height: 7rem;
+      min-width: 7rem;
+      object-fit: cover;
+      background: var(--black);
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.2rem;
+      overflow-x: auto;
+      max-width: 90vw;
+      img {
+        height: 5rem;
+        width: 10rem;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -57,6 +79,12 @@
     .AdminGroup {
       justify-content: center;
       flex-direction: column;
+      .OuterGroup {
+        flex-direction: column;
+        .InnerGroup {
+          flex-direction: column;
+        }
+      }
       h1 {
         font-size: 3rem;
       }
