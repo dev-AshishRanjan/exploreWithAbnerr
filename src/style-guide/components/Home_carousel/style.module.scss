@@ -1,6 +1,8 @@
+@use "../../../styles/mixins.scss";
+
 .hcarousel {
   position: relative;
-  height: 100vh;
+  // height: 100vh;
   width: 100vw;
   // overflow: hidden;
   background: #eee;
@@ -16,10 +18,10 @@
       align-items: center;
       img {
         // display: block;
-        height: 100vh;
+        // height: 100vh;
         width: 100%;
         object-fit: cover;
-        filter: contrast(1) brightness(1) saturate(2);
+        // filter: contrast(1) brightness(1) saturate(2);
       }
     }
     .swiper-button-next {

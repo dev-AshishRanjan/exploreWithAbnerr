@@ -1,0 +1,71 @@
+@use "../../../styles/mixins.scss";
+
+.AboutContainer {
+  // height: 100%;
+  padding-top: 10%;
+  width: 100%;
+  @include mixins.flexCenter;
+
+  .dvanga {
+    @include mixins.flexCenter;
+    flex-direction: column;
+
+    .dvangaimg {
+      @include mixins.flexCenter;
+      height: 50vh;
+      width: 30vw;
+      align-items: flex-end;
+      background: url("../../../../public/images/dvango.jpg") no-repeat center
+        center / cover;
+
+      // background-attachment: fixed;
+    }
+  }
+
+  .seth {
+    @include mixins.flexCenter;
+    flex-direction: column;
+
+    .sethimg {
+      @include mixins.flexCenter;
+      align-items: flex-end;
+      height: 50vh;
+      width: 30vw;
+      background: url("../../../../public/images/seth.jpg") no-repeat center
+        center / cover;
+      // background-attachment: fixed;
+    }
+  }
+  span {
+    font-family: "Roboto";
+    font-size: 4rem;
+    color: transparent;
+    // text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+    // 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    -webkit-text-stroke: 0.15rem rgba(255, 255, 255, 0.662);
+  }
+
+  p {
+    text-align: center;
+    font-family: "Poppins";
+    padding: 15%;
+  }
+}
+
+@media (max-width: 900px) {
+  .AboutContainer {
+    @include mixins.flexCenter;
+    flex-direction: column;
+    .dvanga .dvangaimg {
+      width: 70%;
+      object-fit: cover;
+    }
+    .seth .sethimg {
+      width: 70%;
+      object-fit: cover;
+    }
+    p {
+      padding: 10%;
+    }
+  }
+}

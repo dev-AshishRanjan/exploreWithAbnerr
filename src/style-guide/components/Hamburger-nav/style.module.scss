@@ -12,8 +12,8 @@
     width: 2rem;
     background: radial-gradient(
       circle at bottom right,
-      rgb(95, 30, 148),
-      rgb(153, 85, 207)
+      var(--bloblight-blue),
+      var(--bg-1)
     );
     border-radius: 0.2rem;
     transition: all 0.3s ease-in-out;

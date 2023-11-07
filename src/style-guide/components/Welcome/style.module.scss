@@ -1,0 +1,21 @@
+@use "../../../styles/mixins.scss";
+
+.welcomepara {
+  font-family: "Poppins";
+  text-align: center;
+  padding: 10%;
+  line-height: 1.5rem;
+  font-size: 0.7rem;
+  cursor: text;
+  p {
+    font-family: "Sora";
+  }
+}
+
+.welcomeimg {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../../public/images/welcome.jpg") no-repeat center
+    center / cover;
+  background-attachment: fixed;
+}
