@@ -5,6 +5,7 @@ import Home_carousel from "@/style-guide/components/Home_carousel";
 import Intro from "@/style-guide/components/Intro";
 import Blog_carousel from "@/style-guide/components/Blog_carousel";
 import styles from "./style.module.scss";
+import Footer from "@/style-guide/components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
@@ -81,6 +82,7 @@ const Layout = ({ children }) => {
           setMobileHamClicked={setMobileHamClicked}
         />
         {children}
+        {/* <Footer /> */}
       </div>
     </>
   );

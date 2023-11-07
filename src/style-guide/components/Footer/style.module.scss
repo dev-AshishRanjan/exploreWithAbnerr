@@ -1,0 +1,18 @@
+@use "../../../styles/mixins.scss";
+
+.footerpage {
+  @include mixins.flexCenter;
+  flex-direction: column;
+  padding: 2%;
+  background: #2c2d2f;
+  .footerimg {
+    height: 9rem;
+    width: 9rem;
+    padding: 2%;
+  }
+  .footercr {
+    font-family: "Sora";
+    font-size: 0.7rem;
+    color: rgba(231, 157, 22, 0.84);
+  }
+}

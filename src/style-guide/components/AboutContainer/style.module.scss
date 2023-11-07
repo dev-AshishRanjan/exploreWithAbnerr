@@ -57,12 +57,11 @@
     @include mixins.flexCenter;
     flex-direction: column;
     .dvanga .dvangaimg {
-      width: 80%;
-      // height: auto;
+      width: 70%;
       object-fit: cover;
     }
     .seth .sethimg {
-      width: 80%;
+      width: 70%;
       object-fit: cover;
     }
     p {
