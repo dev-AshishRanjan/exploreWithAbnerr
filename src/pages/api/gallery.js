@@ -1,5 +1,5 @@
 import multer from "multer";
-import prisma from "../../../lib/db";
+import { Gallery } from "../../../lib/models";
 import { uploadMany } from "../../../lib/uploader";
 
 const storage = multer.memoryStorage();
@@ -37,16 +37,15 @@ async function POST(req, res) {
       response is an array of objects with url, secure_url, folder, etc
     */
     const response = await uploadMany(fileBufferArray);
-    const galleryImageArray = response.map((file) => {
-      return {
-        url: file.secure_url,
-        category: req.body.category,
-      };
-    });
 
-    await prisma.galleryImage.createMany({
-      data: galleryImageArray,
-    });
+    await Promise.all(
+      response.map((file) => {
+        Gallery.create({
+          url: file.secure_url,
+          category: req.body.category,
+        });
+      })
+    );
 
     res.status(200).json({
       status: "success",

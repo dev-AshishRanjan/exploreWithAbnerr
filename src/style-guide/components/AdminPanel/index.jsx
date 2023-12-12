@@ -15,7 +15,7 @@ const AdminPanel = () => {
     const sendForm = new FormData();
     sendForm.set("category", IMGcategory);
     sendForm.set("image", IMGimage);
-    const members = AddToDatabase(sendForm, "image");
+    const members = AddToDatabase(sendForm, "gallery");
   }
   function handleSubmitART(e) {
     const sendForm = new FormData();
