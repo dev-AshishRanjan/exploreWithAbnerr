@@ -3,7 +3,7 @@ import { uploadMany } from "../../../lib/uploader";
 import { ArticleImage, Article } from "../../../lib/models";
 
 const storage = multer.memoryStorage();
-const parser = multer({ storage: storage }).array("coverImage");
+const parser = multer({ storage: storage }).any();
 
 export const config = {
   api: {
@@ -19,6 +19,7 @@ async function POST(req, res) {
         message: "error",
       });
     }
+    console.log(req.files);
 
     /*
       if all goes well, 
@@ -41,6 +42,7 @@ async function POST(req, res) {
         buffer: [],
       },
     };
+
     req.files.forEach((file) => {
       if (file.fieldname === "coverImage") {
         fileData.coverImage.buffer.push(file.buffer);
@@ -49,27 +51,38 @@ async function POST(req, res) {
       }
     });
 
-    // UPLOADING COVER IMAGE
     /*
-      response is of the form : [{
+      `response` is of the form : [{
         url,
         secure_url,
         folder
       }]
     */
-    const response = await uploadMany(fileData.coverImage.buffer);
+
+    // UPLOADING COVER IMAGE
+    let response = await uploadMany(fileData.coverImage.buffer);
     const coverImage = await ArticleImage.create({
       url: response[0].secure_url,
     });
+
+    // UPLOADING OTHER IMAGES
+    response = await uploadMany(fileData.otherImage.buffer);
+    const otherImages = await Promise.all(
+      response.map((file) => {
+        return ArticleImage.create({
+          url: file.secure_url,
+        });
+      })
+    );
+
+    const otherImageIds = otherImages.map((image) => image.id);
 
     const article = await Article.create({
       title: req.body.title,
       description: req.body.description,
       coverImage: coverImage.id,
+      otherImages: otherImageIds,
     });
-
-    await article.populate("coverImage");
-    console.log(article);
 
     res.status(200).json({
       status: "success",

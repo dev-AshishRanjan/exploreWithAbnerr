@@ -15,15 +15,17 @@ const AdminPanel = () => {
     const sendForm = new FormData();
     sendForm.set("category", IMGcategory);
     sendForm.set("image", IMGimage);
-    const members = AddToDatabase(sendForm, "gallery");
+    AddToDatabase(sendForm, "gallery");
   }
   function handleSubmitART(e) {
     const sendForm = new FormData();
     sendForm.set("title", ARTtitle);
     sendForm.set("coverImage", ARTimage);
     sendForm.set("description", ARTdescription);
-    sendForm.set("otherImage", ARTotherimg);
-    const members = AddToDatabase(sendForm, "article");
+    for (const i in ARTotherimg) {
+      sendForm.set(`otherImage${i}`, ARTotherimg[i]);
+    }
+    AddToDatabase(sendForm, "article");
   }
 
   return (
@@ -49,12 +51,10 @@ const AdminPanel = () => {
               onChange={(e) => {
                 const reader = new FileReader();
                 reader.readAsDataURL(e.target.files[0]);
-                console.log({ reader });
-                reader.addEventListener("load", (e) => {
+                reader.onload = (e) => {
                   const image = document.querySelector(".imageUploadIMG");
-                  // console.log({image});
                   image.attributes.src.value = e.target.result;
-                });
+                };
                 setIMGimage(e.target.files[0]);
               }}
             />
@@ -87,11 +87,10 @@ const AdminPanel = () => {
               onChange={(e) => {
                 const reader = new FileReader();
                 reader.readAsDataURL(e.target.files[0]);
-                console.log({ reader });
-                reader.addEventListener("load", (e) => {
+                reader.onload = (e) => {
                   const image = document.querySelector(".imageUploadART");
                   image.attributes.src.value = e.target.result;
-                });
+                };
                 setARTimage(e.target.files[0]);
               }}
             />
@@ -113,18 +112,17 @@ const AdminPanel = () => {
               title="Uploaded Image"
               onChange={(e) => {
                 const files = Array.from(e.target.files);
+                setARTotherimg(files);
                 const imageBody = document.querySelector(
                   ".imageUploadARTOthers"
                 );
                 while (imageBody.firstChild) {
                   imageBody.removeChild(imageBody.lastChild);
                 }
-                setARTotherimg([]);
                 files.forEach((file) => {
                   const reader = new FileReader();
                   reader.onload = () => {
                     if (reader.readyState === 2) {
-                      setARTotherimg((old) => [...old, reader.result]);
                       const image = document.createElement("img");
                       image.src = reader.result;
                       imageBody.appendChild(image);
