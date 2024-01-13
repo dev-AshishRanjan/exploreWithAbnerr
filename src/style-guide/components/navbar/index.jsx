@@ -62,7 +62,7 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
                     setMobileHamClicked(!mobileHamClicked);
                   }}
                 >
-                  <div className={styles.sublink}>ADVENTURE</div>
+                  <div className={styles.sublink}>WINTER</div>
                 </Link>
                 <Link
                   href="/landscape"
@@ -74,7 +74,7 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
                     setMobileHamClicked(!mobileHamClicked);
                   }}
                 >
-                  <div className={styles.sublink}>LANDSCAPE</div>
+                  <div className={styles.sublink}>AMBIENCE</div>
                 </Link>
                 <Link
                   href="/portrait"
@@ -86,7 +86,7 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
                     setMobileHamClicked(!mobileHamClicked);
                   }}
                 >
-                  <div className={styles.sublink}>PORTRAIT</div>
+                  <div className={styles.sublink}>GOLDEN HOUR</div>
                 </Link>
               </div>
             ) : null}
