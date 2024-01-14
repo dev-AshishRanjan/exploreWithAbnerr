@@ -6,8 +6,8 @@ const GalleryGrid = () => {
   const breakpointColumnsObj = {
     default: 4,
     1100: 3,
-    700: 2,
-    500: 1,
+    750: 2,
+    550: 1,
   };
 
   return (

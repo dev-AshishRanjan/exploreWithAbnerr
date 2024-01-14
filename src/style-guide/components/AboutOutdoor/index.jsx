@@ -42,14 +42,13 @@ const AboutOutdoor = () => {
           And by blending into the background, they become storytellers who
           understand the nuances of lifestyle, ensuring that each photograph
           reflects not just an image but a personal journey.
-          <br />
-          <br />
+          <div className={styles.earthimg}></div>
           Afterall, It is all about memories we make and leave behind on this
-          earth (PHOTO), impressions we make on the people we have met(PHOTO),
-          freezing certain milestones and achievements (PHOTO) and being able to
-          back at old photographs as a source of joy and reflection(PHOTO), is
-          what makes Visual Media such as Photography an indispensable form of
-          art.
+          earth , impressions we make on the people we have met, freezing
+          certain milestones and achievements and being able to back at old
+          photographs as a source of joy and reflection,
+          <div className={styles.oldimg}></div> is what makes Visual Media such
+          as Photography an indispensable form of art <b>.</b>
         </p>
       </div>
     </>
