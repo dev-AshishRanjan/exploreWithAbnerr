@@ -9,7 +9,7 @@ const ContactSection = () => {
   return (
     <div className={styles.ContactSection} id="contact">
       <form
-        action="https://formsubmit.co/kumarashishranjan4971@gmail.com"
+        action="https://formsubmit.co/kashyaptolemy@gmail.com"
         method="POST"
       >
         <input

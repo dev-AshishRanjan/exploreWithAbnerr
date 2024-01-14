@@ -7,7 +7,7 @@ const about = () => {
   return (
     <>
       <AboutContainer />
-      <LovingMemory />
+      {/* <LovingMemory /> */}
     </>
   );
 };

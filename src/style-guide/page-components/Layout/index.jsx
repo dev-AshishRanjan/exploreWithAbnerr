@@ -9,6 +9,8 @@ import Footer from "@/style-guide/components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
+import { ReactLenis } from "@studio-freight/react-lenis";
+import Lenis from "@studio-freight/lenis";
 
 const Layout = ({ children }) => {
   const [mobileHamClicked, setMobileHamClicked] = useState(false);
@@ -35,6 +37,14 @@ const Layout = ({ children }) => {
   const [cursorVariant, setCursorVariant] = useState("default");
 
   useEffect(() => {
+    // const lenis = new Lenis();
+    // function raf(time) {
+    //   lenis.raf(time);
+    //   requestAnimationFrame(raf);
+    // }
+
+    // requestAnimationFrame(raf);
+
     const mouseMove = (e) => {
       setMousePosition({
         x: e.clientX,
@@ -66,6 +76,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      {/* <ReactLenis root> */}
       <div className={styles.body}>
         <motion.div
           className={styles.cursor1}
@@ -82,8 +93,8 @@ const Layout = ({ children }) => {
           setMobileHamClicked={setMobileHamClicked}
         />
         {children}
-        {/* <Footer /> */}
       </div>
+      {/* </ReactLenis> */}
     </>
   );
 };

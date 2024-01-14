@@ -1,0 +1,63 @@
+@use "../../../styles/mixins.scss";
+
+.container {
+  padding: 5%;
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    font-family: "Sora";
+  }
+  .paras {
+    font-size: 1.2rem;
+    font-family: "Poppins";
+    margin-bottom: 5rem;
+  }
+  .joyimg {
+    width: 90vw;
+    height: 90vh;
+    background: url("../../../../public/images/JOY.JPG") no-repeat center center /
+      cover;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .momentimg {
+    width: 90vw;
+    height: 90vh;
+    background: url("../../../../public/images/MOMENT.JPG") no-repeat center
+      center / cover;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .captureimg {
+    width: 90vw;
+    height: 90vh;
+    background: url("../../../../public/images/CAPTURE.JPG") no-repeat center
+      center / cover;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .uniqueimg {
+    width: 90vw;
+    height: 90vh;
+    background: url("../../../../public/images/UNIQUE.JPG") no-repeat center
+      center / cover;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .earthimg {
+    width: 90vw;
+    height: 90vh;
+    background: url("../../../../public/images/earth.jpg") no-repeat center
+      center / cover;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+  .oldimg {
+    width: 90vw;
+    height: 90vh;
+    background: url("../../../../public/images/old.JPG") no-repeat center center /
+      cover;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+}

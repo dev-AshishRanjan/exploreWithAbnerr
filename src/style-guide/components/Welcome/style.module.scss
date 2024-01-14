@@ -2,11 +2,17 @@
 
 .welcomepara {
   font-family: "Poppins";
-  text-align: center;
+  text-align: start;
   padding: 10%;
   line-height: 1.5rem;
-  font-size: 0.7rem;
+  font-size: 1rem;
   cursor: text;
+  .heading {
+    font-family: "Sora";
+    padding-bottom: 5%;
+    font-size: 2.5rem;
+    text-align: center;
+  }
   p {
     font-family: "Sora";
   }
