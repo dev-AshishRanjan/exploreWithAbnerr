@@ -53,36 +53,36 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
             {dropdown ? (
               <div className={styles.gallerylinks}>
                 <Link
-                  href="/adventure"
+                  href="/winter"
                   className={`${
-                    activeLink === "adventure" ? styles.activeLink : null
+                    activeLink === "winter" ? styles.activeLink : null
                   }`}
                   onClick={() => {
-                    setActiveLink("adventure");
+                    setActiveLink("winter");
                     setMobileHamClicked(!mobileHamClicked);
                   }}
                 >
                   <div className={styles.sublink}>WINTER</div>
                 </Link>
                 <Link
-                  href="/landscape"
+                  href="/ambience"
                   className={`${
-                    activeLink === "landscape" ? styles.activeLink : null
+                    activeLink === "ambience" ? styles.activeLink : null
                   }`}
                   onClick={() => {
-                    setActiveLink("landscape");
+                    setActiveLink("ambience");
                     setMobileHamClicked(!mobileHamClicked);
                   }}
                 >
                   <div className={styles.sublink}>AMBIENCE</div>
                 </Link>
                 <Link
-                  href="/portrait"
+                  href="/goldenhour"
                   className={`${
-                    activeLink === "portrait" ? styles.activeLink : null
+                    activeLink === "goldenhour" ? styles.activeLink : null
                   }`}
                   onClick={() => {
-                    setActiveLink("portrait");
+                    setActiveLink("goldenhour");
                     setMobileHamClicked(!mobileHamClicked);
                   }}
                 >

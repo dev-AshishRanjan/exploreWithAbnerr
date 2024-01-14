@@ -20,9 +20,9 @@ const AboutOutdoor = () => {
           it's the joy of a successful ride,
           <div className={styles.joyimg}></div>
           the capture of all the little details around you,
-          <div className={styles.captureimg}></div>, or the quiet satisfaction
-          of a moment alone with the bike,
-          <div className={styles.momentimg}></div>, every frame tells a unique
+          <div className={styles.captureimg}></div> or the quiet satisfaction of
+          a moment alone with the bike,
+          <div className={styles.momentimg}></div> every frame tells a unique
           and heartfelt story .<div className={styles.uniqueimg}></div>
           <br />
           In my view, Being able to shape light, colour grade pictures and add
