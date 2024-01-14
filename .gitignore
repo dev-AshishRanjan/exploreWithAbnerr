@@ -7,6 +7,8 @@
 
 /pnpm-lock.json
 /package-lock.json
+/pnpm-lock.yaml
+
 
 # testing
 /coverage
@@ -29,6 +31,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+/.env
 
 # vercel
 .vercel
