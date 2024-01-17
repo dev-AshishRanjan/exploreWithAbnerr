@@ -53,8 +53,36 @@ async function POST(req, res) {
   });
 }
 
+async function GET(req, res) {
+  const { category } = req.query;
+
+  const images = await Gallery.find({
+    category: category,
+  });
+
+  return res.status(200).json({
+    status: "success",
+    images: images,
+  });
+}
+
 export default async function handler(req, res) {
-  if (req.method === "POST") {
-    await POST(req, res);
+  try {
+    switch (req.method) {
+      case "POST":
+        return await POST(req, res);
+
+      case "GET":
+        return await GET(req, res);
+
+      default:
+        return res.status(200);
+    }
+  } catch (error) {
+    console.log(error);
+    return res.json(500).json({
+      status: "error",
+      message: "internal server error",
+    });
   }
 }
