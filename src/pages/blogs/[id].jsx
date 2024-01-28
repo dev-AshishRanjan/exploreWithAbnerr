@@ -19,19 +19,18 @@ const Blog = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const { id } = router.query;
+
   useEffect(() => {
     try {
       fetch(`${process.env.NEXT_PUBLIC_SERVER}/api/article`)
         .then((req) => req.json())
         .then((res) => {
           console.log({ res });
-          res.articles.map((ele) => {
-            if (ele._id == id) {
-              console.log({ ele });
-              setArticledata(ele);
-              setLoading(false);
-            }
-          });
+          console.log({ id });
+          const ExactArticle = res.articles.find((ele) => ele._id === id);
+          console.log({ ExactArticle });
+          setArticledata(ExactArticle);
+          setLoading(false);
         });
     } catch (err) {
       toast.error("Network Error");
@@ -41,14 +40,19 @@ const Blog = () => {
     //     setArticledata(ele);
     //   }
     // })
-  }, []);
-  if (!articledata || !articledata.title || loading) {
+  }, [id]);
+  if (
+    !articledata ||
+    !articledata.title ||
+    loading ||
+    articledata === undefined
+  ) {
     return <Spinner />;
   } else
     return (
       <div className={styles.BlogPage}>
         <img
-          src={articledata.coverImage.url}
+          src={articledata?.coverImage?.url}
           alt=""
           className={styles.coverImage}
         />
@@ -74,11 +78,11 @@ const Blog = () => {
             modules={[Autoplay, Pagination, Navigation, FreeMode]}
             className={styles.swiper}
           >
-            {articledata.otherImages.length > 0 &&
+            {articledata.otherImages?.length > 0 &&
               articledata.otherImages.map((ele, ind) => {
                 return (
                   <SwiperSlide className={styles.swiper_slide} key={ind}>
-                    <img src={ele.url} alt="" />
+                    <img src={ele?.url} alt="" />
                   </SwiperSlide>
                 );
               })}
