@@ -1,0 +1,32 @@
+.BlogCard {
+  height: 20rem;
+  width: max(20rem, 45vw);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  img {
+    object-fit: cover;
+    // height: 100%;
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle at center, var(--card-bg), transparent);
+  }
+  h2 {
+    font-size: 1.3rem;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+  }
+}
