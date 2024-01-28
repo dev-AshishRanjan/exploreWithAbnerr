@@ -30,7 +30,7 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
               setMobileHamClicked(!mobileHamClicked);
             }}
           >
-            <img src="./images/logo.jpg" alt="DVANGA"></img>
+            <img src="/images/logo.jpg" alt="DVANGA"></img>
           </Link>
         </div>
         <div className={styles.nav_links}>

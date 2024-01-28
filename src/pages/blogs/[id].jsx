@@ -26,7 +26,8 @@ const Blog = () => {
         .then((res) => {
           console.log({ res });
           res.articles.map((ele) => {
-            if (ele._id === id) {
+            if (ele._id == id) {
+              console.log({ ele });
               setArticledata(ele);
               setLoading(false);
             }
@@ -47,7 +48,7 @@ const Blog = () => {
     return (
       <div className={styles.BlogPage}>
         <img
-          src={articledata.coverImage}
+          src={articledata.coverImage.url}
           alt=""
           className={styles.coverImage}
         />
@@ -77,7 +78,7 @@ const Blog = () => {
               articledata.otherImages.map((ele, ind) => {
                 return (
                   <SwiperSlide className={styles.swiper_slide} key={ind}>
-                    <img src={ele} alt="" />
+                    <img src={ele.url} alt="" />
                   </SwiperSlide>
                 );
               })}
