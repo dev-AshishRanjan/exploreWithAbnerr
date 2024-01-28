@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import ArticlesData from "../../../blogs.json";
 import styles from "../../styles/Blogs.module.scss";
-import Spinner from "../../style-guide/components/Spinner";
+import Spinner from "@/style-guide/components/spinner";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { register } from "swiper/element/bundle";

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import BlogCard from "../../style-guide/components/BlogCard";
 import ArticlesData from "../../../blogs.json";
 import styles from "../../styles/Blogs.module.scss";
-import Spinner from "../../style-guide/components/Spinner";
+import Spinner from "@/style-guide/components/spinner";
 import { toast } from "react-toastify";
 
 export default function Blogs() {
