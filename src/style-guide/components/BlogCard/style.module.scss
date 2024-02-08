@@ -1,0 +1,37 @@
+.BlogCard {
+  height: 25rem;
+  width: max(20rem, 80vw);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  // border: 1px solid red;
+  img {
+    object-fit: cover;
+    // height: 100%;
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle at center, var(--card-bg), transparent);
+  }
+  h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding: 1.5rem;
+    // text-align: center;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: var(--white);
+  }
+}

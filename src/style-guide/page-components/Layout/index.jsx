@@ -9,8 +9,6 @@ import Footer from "@/style-guide/components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
-import { ReactLenis } from "@studio-freight/react-lenis";
-import Lenis from "@studio-freight/lenis";
 
 const Layout = ({ children }) => {
   const [mobileHamClicked, setMobileHamClicked] = useState(false);

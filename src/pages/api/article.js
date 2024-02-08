@@ -19,7 +19,6 @@ async function POST(req, res) {
         message: "error",
       });
     }
-    console.log(req.files);
 
     /*
       if all goes well, 
@@ -86,12 +85,42 @@ async function POST(req, res) {
 
     res.status(200).json({
       status: "success",
+      article: article,
     });
   });
 }
 
+async function GET(req, res) {
+  const articles = await Article.find({}).populate([
+    {
+      path: "coverImage",
+      select: "url -_id",
+    },
+    {
+      path: "otherImages",
+      select: "url -_id",
+    },
+  ]);
+
+  return res.status(200).json({
+    status: "success",
+    articles: articles,
+  });
+}
+
 export default async function handler(req, res) {
-  if (req.method === "POST") {
-    await POST(req, res);
+  try {
+    switch (req.method) {
+      case "POST":
+        return await POST(req, res);
+
+      case "GET":
+        return await GET(req, res);
+    }
+  } catch (error) {
+    res.status(500).json({
+      status: "error",
+      message: "internal server error",
+    });
   }
 }

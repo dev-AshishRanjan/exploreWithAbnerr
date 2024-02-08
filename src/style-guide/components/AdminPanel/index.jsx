@@ -5,7 +5,7 @@ import AddToDatabase from "@/utils/AddToDatabase";
 const AdminPanel = () => {
   // codes form admin console
   const [IMGimage, setIMGimage] = useState();
-  const [IMGcategory, setIMGcategory] = useState();
+  const [IMGcategory, setIMGcategory] = useState("Winter");
   const [ARTimage, setARTimage] = useState();
   const [ARTtitle, setARTtitle] = useState();
   const [ARTdescription, setARTdescription] = useState();
@@ -15,6 +15,7 @@ const AdminPanel = () => {
     const sendForm = new FormData();
     sendForm.set("category", IMGcategory);
     sendForm.set("image", IMGimage);
+    console.log({ sendForm });
     AddToDatabase(sendForm, "gallery");
   }
   function handleSubmitART(e) {
@@ -35,13 +36,24 @@ const AdminPanel = () => {
         <div className={styles.OuterGroup}>
           <div className={styles.InnerGroup}>
             <label htmlFor="category">Category</label>
-            <input
+            <select
+              name="category"
+              id="category"
+              value={IMGcategory}
+              onChange={(e) => setIMGcategory(e.target.value)}
+            >
+              {/* <option value="select category">select category</option> */}
+              <option value="Winter">Winter</option>
+              <option value="Ambience">Ambience</option>
+              <option value="Golden Hour">Golden Hour</option>
+            </select>
+            {/* <input
               type="text"
               name="category"
               id="category"
               value={IMGcategory}
               onChange={(e) => setIMGcategory(e.target.value)}
-            />
+            /> */}
             <label htmlFor="IMGimage">Cover Image</label>
             <input
               type="file"

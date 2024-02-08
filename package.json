@@ -11,8 +11,6 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@studio-freight/lenis": "^1.0.27",
-    "@studio-freight/react-lenis": "^0.0.36",
     "@types/formidable": "^3.4.5",
     "axios": "^1.6.0",
     "cloudinary": "^1.41.0",

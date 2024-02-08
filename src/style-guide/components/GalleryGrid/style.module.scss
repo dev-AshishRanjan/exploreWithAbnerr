@@ -1,12 +1,10 @@
 .container {
-  // width: 90%;
   margin: 3rem;
   margin-top: 10rem;
 }
 
 .gallery {
   display: flex;
-  // margin-left: -10px;
   width: auto;
 }
 
@@ -17,6 +15,7 @@
 .image {
   position: relative;
   overflow: hidden;
+  margin-bottom: 8px;
 
   img {
     width: 100%;
