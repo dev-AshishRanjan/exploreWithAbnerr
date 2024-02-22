@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import BlogCard from "../../style-guide/components/BlogCard";
 import ArticlesData from "../../../blogs.json";
