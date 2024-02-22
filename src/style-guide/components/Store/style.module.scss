@@ -1,0 +1,13 @@
+@use "../../../styles/mixins.scss";
+
+.storecontainer {
+  height: 100%;
+  width: 100%;
+  @include mixins.flexCenter;
+  .msg {
+    font-size: 4rem;
+    font-family: "Anton", serif;
+    font-weight: 900;
+    filter: invert(0.5);
+  }
+}

@@ -2,7 +2,8 @@
 
 .content {
   .aboutpara {
-    font-family: "Sora";
+    font-family: "Lexend Mega", sans-serif;
+    letter-spacing: -0.1rem;
     text-align: center;
     padding: 10%;
     line-height: 2rem;
@@ -17,7 +18,6 @@
 
   .moreabout {
     @include mixins.flexCenter;
-
     .arrowlink {
       text-align: center;
       text-decoration: none;
@@ -35,6 +35,7 @@
     }
 
     .arrowlink span {
+      font-family: "Archivo", sans-serif;
       position: relative;
       z-index: 1;
     }

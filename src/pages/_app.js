@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Professional Portfolio</title>
+        <title>ExploreWithAbnerr</title>
         <meta name="description" content="Portfolio website for all" />
         <meta name="keywords" content="portfolio, web dev" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

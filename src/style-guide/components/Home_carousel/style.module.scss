@@ -2,13 +2,13 @@
 
 .hcarousel {
   position: relative;
-  // height: 100vh;
   width: 100vw;
-  // overflow: hidden;
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
   .swiper {
     width: 100%;
+
     .swiper_slide {
       text-align: center;
       font-size: 18px;
@@ -16,16 +16,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      filter: brightness(120%) contrast(100%);
       img {
-        // display: block;
-        // height: 100vh;
         width: 100%;
         object-fit: cover;
-        // filter: contrast(1) brightness(1) saturate(2);
       }
     }
-    .swiper-button-next {
-      color: red;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white !important; // Set the color to white
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      color: white !important; // Set the color to white for the arrow icon
     }
   }
 }

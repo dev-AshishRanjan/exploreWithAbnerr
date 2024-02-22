@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { React, useState } from "react";
 import styles from "./style.module.scss";
 import Link from "next/link";
 
@@ -29,8 +29,9 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
               setActiveLink("home");
               setMobileHamClicked(!mobileHamClicked);
             }}
+            style={{ display: "inline-block", height: "5rem", width: "5rem" }}
           >
-            <img src="/images/logo.jpg" alt="DVANGA"></img>
+            <img src="/images/logo2.jpg" alt="DVANGA"></img>
           </Link>
         </div>
         <div className={styles.nav_links}>
@@ -102,7 +103,7 @@ const Navbar = ({ mobileHamClicked, setMobileHamClicked }) => {
             BLOGS
           </Link>
           <Link
-            href="/"
+            href="/store"
             className={`${activeLink === "store" ? styles.activeLink : null}`}
             onClick={() => {
               setActiveLink("store");

@@ -1,7 +1,12 @@
 import React from "react";
+import GalleryGrid from "../style-guide/components/GalleryGrid";
 
 const ambience = () => {
-  return <div></div>;
+  return (
+    <>
+      <GalleryGrid />
+    </>
+  );
 };
 
 export default ambience;

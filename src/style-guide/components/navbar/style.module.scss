@@ -16,9 +16,20 @@
     transition: all 0.3s ease-in-out;
 
     // backdrop-filter: blur(0.1px);
-    .logo img {
-      height: 4rem;
+
+    .logo {
+      height: 5rem;
       width: 5rem;
+    }
+
+    .logo a {
+      height: 100%;
+      width: 100%;
+    }
+
+    .logo img {
+      height: 100%;
+      width: 100%;
     }
 
     .nav_links {
@@ -30,6 +41,7 @@
           position: absolute;
           align-items: flex-start;
           flex-direction: column;
+
           .sublink {
             font-size: 0.8rem;
           }
@@ -41,12 +53,12 @@
         text-decoration: none;
         margin: 0 1.5rem;
         color: var(--white);
-        padding: 0.5rem;
-        font-family: "Bitter", serif;
+        padding: 0.2rem;
+        font-family: "Archivo", sans-serif;
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 1.1rem;
         cursor: pointer;
-        font-weight: 600;
+        transition: all 1s ease-in;
 
         &:active {
           color: var(--btn-bg-1);

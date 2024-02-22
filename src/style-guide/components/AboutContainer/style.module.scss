@@ -10,7 +10,7 @@
   .dvanga {
     @include mixins.flexCenter;
     flex-direction: column;
-
+    // letter-spacing: -0.1rem;
     .dvangaimg {
       @include mixins.flexCenter;
       height: 50vh;
@@ -49,7 +49,7 @@
   p {
     text-align: center;
     font-family: "Poppins";
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     padding: 15%;
   }
 }
