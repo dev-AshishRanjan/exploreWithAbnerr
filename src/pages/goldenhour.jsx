@@ -1,7 +1,12 @@
 import React from "react";
+import GalleryGrid from "../style-guide/components/GalleryGrid";
 
 const goldenhour = () => {
-  return <div></div>;
+  return (
+    <>
+      <GalleryGrid />
+    </>
+  );
 };
 
 export default goldenhour;
