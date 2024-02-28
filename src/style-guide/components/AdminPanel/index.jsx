@@ -15,7 +15,6 @@ const AdminPanel = () => {
     const sendForm = new FormData();
     sendForm.set("category", IMGcategory);
     sendForm.set("image", IMGimage);
-    console.log({ sendForm });
     AddToDatabase(sendForm, "gallery");
   }
   function handleSubmitART(e) {
@@ -60,6 +59,7 @@ const AdminPanel = () => {
               name="IMGimage"
               id="IMGimage"
               title="Uploaded Image"
+              // style={{z-index:2;}}
               onChange={(e) => {
                 const reader = new FileReader();
                 reader.readAsDataURL(e.target.files[0]);

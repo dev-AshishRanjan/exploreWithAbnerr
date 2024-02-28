@@ -16,7 +16,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      filter: brightness(120%) contrast(100%);
+
+      // filter: brightness(120%) contrast(100%);
       img {
         width: 100%;
         object-fit: cover;

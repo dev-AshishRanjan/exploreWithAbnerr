@@ -7,8 +7,10 @@ const AddToDatabase = async (sendForm, type) => {
     const res = await axios.post(`${ServerUrl}/api/${type}`, sendForm, {
       headers: { "Content-Type": "multipart/form-data" },
     });
+    console.log({ res });
     toast.success(`${type} Added`);
   } catch (err) {
+    console.log({ err });
     toast.error(err.message);
   }
 };

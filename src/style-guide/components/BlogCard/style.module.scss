@@ -8,7 +8,6 @@
   align-items: center;
   position: relative;
   text-decoration: none;
-  // border: 1px solid red;
   img {
     object-fit: cover;
     // height: 100%;
@@ -20,8 +19,14 @@
     height: 100%;
     width: 100%;
     background: radial-gradient(circle at center, var(--card-bg), transparent);
+    transition: opacity 0.3s;
+    &:hover {
+      // background: transparent;
+      opacity: 0.2;
+    }
   }
   h2 {
+    font-family: "Archivo Black", sans-serif;
     font-size: 3rem;
     font-weight: 600;
     position: absolute;

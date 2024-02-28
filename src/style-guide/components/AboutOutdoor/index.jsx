@@ -8,7 +8,7 @@ const AboutOutdoor = () => {
         <div className={styles.heading}>
           SO Why choose Outdoor and Lifestyle Photography ?
         </div>
-        <p className={styles.paras}>
+        <div className={styles.paras}>
           I mean SHEESH ! How should I even go on about expressing this ! In my
           opinion, there is no better way to showcase genuine moments than by
           documenting the complexities of daily life. It is a narrative that
@@ -49,7 +49,7 @@ const AboutOutdoor = () => {
           photographs as a source of joy and reflection,
           <div className={styles.oldimg}></div> is what makes Visual Media such
           as Photography an indispensable form of art <b>.</b>
-        </p>
+        </div>
       </div>
     </>
   );
