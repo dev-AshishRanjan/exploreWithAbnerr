@@ -21,7 +21,7 @@ const Home_carousel = () => {
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 6000,
           disableOnInteraction: true,
         }}
         pagination={{

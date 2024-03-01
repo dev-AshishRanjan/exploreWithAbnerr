@@ -2,7 +2,7 @@
   background: radial-gradient(
     circle at 85vw 50vh,
     var(--bloblight-blue),
-    var(--bg-1) 40%
+    #728dfa
   );
   height: 100vh;
   width: 100vw;
@@ -31,6 +31,7 @@
   height: 100vh;
   width: 100vw;
 }
+
 .footer {
   height: 30vh;
   width: 100vw;
@@ -59,7 +60,7 @@
     background: radial-gradient(
       circle at 50vw 80vh,
       var(--bloblight-blue),
-      var(--bg-1) 40%
+      #1a0be687
     );
   }
 }

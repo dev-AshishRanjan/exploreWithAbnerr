@@ -2,6 +2,7 @@
   min-height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -19,18 +20,29 @@
   flex-wrap: wrap;
   gap: 0.7rem;
   padding: 0 2rem;
+
   .coverImage {
     width: 100vw;
     user-select: none;
   }
+
   h1 {
     font-size: 3rem;
     margin: 2rem 0;
   }
+
   p {
     line-height: 1.5;
     font-size: 1.3rem;
     margin-bottom: 2rem;
+  }
+
+  .description {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: "Lexend Mega", sans-serif;
+    letter-spacing: -0.1rem;
+    font-size: 1.1rem;
   }
 
   .carousel {
@@ -41,8 +53,10 @@
     background: #eee;
     border-radius: 0.5rem;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
     .swiper {
       width: 100%;
+
       .swiper_slide {
         text-align: center;
         font-size: 18px;
@@ -50,6 +64,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
           // display: block;
           // height: 100vh;
@@ -58,6 +73,7 @@
           // filter: contrast(1) brightness(1) saturate(2);
         }
       }
+
       .swiper-button-next {
         color: red;
       }

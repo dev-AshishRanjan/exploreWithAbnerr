@@ -5,20 +5,24 @@
   padding-top: 10%;
   width: 100%;
   @include mixins.flexCenter;
-  // justify-content:flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   .dvanga {
     @include mixins.flexCenter;
     flex-direction: column;
+
     // letter-spacing: -0.1rem;
     .dvangaimg {
       @include mixins.flexCenter;
-      height: 50vh;
-      width: 30vw;
+      height: 60vh;
+      width: 70%;
+      object-fit: cover;
       align-items: flex-end;
       background: url("../../../../public/images/dvango.jpg") no-repeat center
         center / cover;
-
+      border-radius: 0.3rem;
       // background-attachment: fixed;
     }
   }
@@ -30,13 +34,16 @@
     .sethimg {
       @include mixins.flexCenter;
       align-items: flex-end;
-      height: 50vh;
-      width: 30vw;
+      height: 60vh;
+      width: 70%;
+      object-fit: cover;
       background: url("../../../../public/images/seth.jpg") no-repeat center
         center / cover;
       // background-attachment: fixed;
+      border-radius: 0.3rem;
     }
   }
+
   span {
     font-family: "Roboto";
     font-size: 4rem;
@@ -51,6 +58,7 @@
     font-family: "Poppins";
     font-size: 1.25rem;
     padding: 15%;
+    padding-top: 10%;
   }
 }
 
@@ -58,14 +66,17 @@
   .AboutContainer {
     @include mixins.flexCenter;
     flex-direction: column;
+
     .dvanga .dvangaimg {
       width: 70%;
       object-fit: cover;
     }
+
     .seth .sethimg {
       width: 70%;
       object-fit: cover;
     }
+
     p {
       padding: 10%;
     }
