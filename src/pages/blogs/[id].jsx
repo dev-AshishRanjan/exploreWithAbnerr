@@ -8,6 +8,7 @@ import Spinner from "@/style-guide/components/spinner";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { register } from "swiper/element/bundle";
 register();
+import Masonry from "react-masonry-css";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -87,30 +88,6 @@ const Blog = () => {
                   </SwiperSlide>
                 );
               })}
-            {/* <SwiperSlide className={styles.swiper_slide}>
-            <img src="./images/1.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiper_slide}>
-            <img src="./images/2.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiper_slide}>
-            <img src="./images/3.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiper_slide}>
-            <img src="./images/4.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiper_slide}>
-            <img src="./images/5.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiper_slide}>
-            <img src="./images/6.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiper_slide}>
-            <img src="./images/7.jpg" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles.swiper_slide}>
-            <img src="./images/8.jpg" alt="" />
-          </SwiperSlide> */}
           </Swiper>
         </div>
       </div>

@@ -30,7 +30,7 @@ export default function Blogs() {
     return (
       <div className={styles.BlogsPage}>
         {articledata.map((item) => (
-          <BlogCard key={item._id} data={item} />
+          <BlogCard key={item._id} data={item} className={styles.blog} />
         ))}
       </div>
     );
